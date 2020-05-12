@@ -1,0 +1,50 @@
+<html>
+<head><title>4 Function Calculator</title>
+  <script language="JavaScript">
+    function load()
+    {
+	form1.op.value='EXAMPLE: Click on  "+"';
+	form1.A.value='60';
+	form1.B.value='5';
+    }
+    function add()
+    {
+	d = Math.round( 10000*parseFloat(form1.A.value))/10000;
+	s = Math.round( 10000*parseFloat(form1.B.value))/10000;
+	form1.result.value=Math.round(10000*( d+s ))/10000;	
+	form1.op.value='ADD: ' + form1.A.value + ' + ' + form1.B.value + " = " + form1.result.value;
+
+    }
+    function subtract()
+    {
+	d = Math.round( 10000*parseFloat(form1.A.value))/10000;
+	s = Math.round( 10000*parseFloat(form1.B.value))/10000;
+	form1.result.value=Math.round(10000*( d-s ))/10000;	
+	form1.op.value='SUBTRACT: ' + form1.A.value + ' - ' + form1.B.value + " = " + form1.result.value;
+
+    }
+    function multiply()
+    {
+	d = Math.round( 10000*parseFloat(form1.A.value))/10000;
+	s = Math.round( 10000*parseFloat(form1.B.value))/10000;
+	form1.result.value=Math.round(10000*( d*s ))/10000;
+	form1.op.value='MULTIPLY: ' + form1.A.value + ' * ' + form1.B.value + " = " + form1.result.value;
+    }
+    function divide()
+    {
+	d = Math.round( 10000*parseFloat(form1.A.value))/10000;
+	s = Math.round( 10000*parseFloat(form1.B.value))/10000;
+	form1.result.value=Math.round(10000*( d/s ))/10000;
+	form1.op.value='DIVIDE: ' + form1.A.value + ' / ' + form1.B.value + " = " + form1.result.value;
+    }
+</script>
+</head>
+
+<body onload="load()">
+<form name='form1' action='' method='GET'>
+  <pre>Status:<input type='tet' id='op' name='op' size=40></pre>
+    <input type='text' id='A' name='A' size=10><input type='button' onClick="javascript:add();" value='+'><input type='button' onClick="javascript:subtract();" value='-'><input type='button' onClick="javascript:multiply();" value='&times;'><input type='button' onClick="javascript:divide();" value='&div;'><input type='text' id='B' name='B' size=10> = <input type='text' id='result' name='result' size=10></pre></form><hr>
+<center><font size=-1><i>Four Function Moodle Calculator by Mr. Pellegrino - 2019 02 13</i></font></center>
+
+</body>
+</html>
